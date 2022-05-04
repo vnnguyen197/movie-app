@@ -38,9 +38,9 @@ import { IMG_URL_Contributors1, IMG_URL_Contributors2, IMG_URL_Contributors3, IM
       getKeyWords();
     }, [id]);
    
-    if (loading === true) {
-        return <div>Loading...</div>;
-      }
+    // if (loading === true) {
+    //     return <div>Loading...</div>;
+    //   }
   
     return (
       <section className={style.content_right}>

@@ -10,7 +10,7 @@ import Banner from './components/Banner';
 const MovieDetail = (props: any) => {
 
   const dispatch = useDispatch();
-  const { id } = useParams<{ id: any }>();
+  const { id } = useParams<any>();
 
   useEffect(() => {
     dispatch(getDetailMovieRequest({ id: id }));

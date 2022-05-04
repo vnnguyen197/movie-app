@@ -11,7 +11,14 @@ import ModalVideo from 'components/Modal/ModalVideo';
 
 interface ContactFormProps {
   setOpenBanner: (param: boolean) => boolean;
-  id: any,
+  id: number,
+}
+interface Item {
+  id: number;
+  name:string;
+}
+interface ArrayItem {
+  data: Item[]
 }
 
 const Banner = (props: ContactFormProps) => {
@@ -62,7 +69,8 @@ const Banner = (props: ContactFormProps) => {
   }
 
   return (
-    <div className={styles.mainBanner} id={props.id} >
+    
+    <div className={styles.mainBanner} id={`${props.id}`}>
       <div className={styles.banner}
         style={{ backgroundImage: `url("${IMG_URL_Banner + detail.backdrop_path}")`, }}>
         <div className={styles.banner_header}>
@@ -173,6 +181,7 @@ const Banner = (props: ContactFormProps) => {
         </div>
       </div>
     </div>
+
   )
 }
 

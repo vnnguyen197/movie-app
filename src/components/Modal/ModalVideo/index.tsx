@@ -37,4 +37,5 @@ const ModalVideo = ({ closeModal }:any) => {
         </div>
     )
 }
+
 export default ModalVideo;

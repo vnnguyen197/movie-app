@@ -19,7 +19,13 @@ interface MovieDetail {
     title: string;
     belongs_to_collection: { backdrop_path: string, name: string }
 };
-
+interface Movies {
+    title: string;
+};
+interface State extends defaultState {
+    list: Movies[],
+    detail: MovieDetail,
+};
 export const initMovieDetail: MovieDetail = {
     id: 0,
     poster_path: '',
@@ -38,13 +44,6 @@ export const initMovieDetail: MovieDetail = {
     title: '',
     belongs_to_collection: { backdrop_path: '', name: '' }
 }
-interface Movies {
-    title: string;
-};
-interface State extends defaultState {
-    list: Movies[],
-    detail: MovieDetail,
-};
 //setup default state in constant
 const initialState: State = {
     ...DEFAULT_STATE,
