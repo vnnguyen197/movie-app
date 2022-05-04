@@ -21,7 +21,7 @@ interface Data {
 }
 export const initData: Array<Data> = [
   {
-    author: '',
+    author: ' ',
     author_details: { avatar_path: '', rating: '' },
     release_date: '',
     content: '',
@@ -94,7 +94,7 @@ function SocialMovie() {
                     <a>
                       <img
                         src={IMG_URL_SocialMovie}
-                        alt={data[1].author}
+                        alt={data[0].author}
                         height="64px"
                         width="64px"
                       ></img>
@@ -103,9 +103,9 @@ function SocialMovie() {
                   <div className={style.infor}>
                     <div className={style.rating}>
                       <h3>
-                        <a href="/">A review by {data[1].author}</a>
+                        <a href="/">A review by {data[0].author}</a>
                       </h3>
-                      {data[1].author_details.rating !== null && (
+                      {data[0].author_details.rating !== null && (
                         <div className={style.rate}>
                           <FontAwesomeIcon
                             color="white"
@@ -113,28 +113,29 @@ function SocialMovie() {
                             size="sm"
                             fixedWidth
                           />
-                          <span>{data[1].author_details.rating}.0</span>
+                          <span>{data[0].author_details.rating}.0</span>
                         </div>
                       )}
                     </div>
                     <h5>
                       Written by{" "}
-                      <span style={{ color: "#727272" }}>{data[1].author}</span>{" "}
-                      on {dayjs(data[2].release_date).format("MMM DD, YYYY")}
+                      <span style={{ color: "#727272" }}>{data[0].author}</span>{" "}
+                      on {dayjs(data[0].release_date).format("MMM DD, YYYY")}
                     </h5>
                   </div>
                 </div>
                 <div className={style.teaser}>
                   {data[0].content.length > 500 ? (
                     <p className={style.content_teaser}>
+                      {/* {data[0].content} */}
                       {data[0].content.substring(0, 500)}...{" "}
                       <span>
                         <a href={IMG_URL_ReadMore}>read more</a>
                       </span>
                     </p>
-                  ) : (
+                   ) : (
                     <ReactMarkdown>{data[0].content}</ReactMarkdown>
-                  )}
+                  )}  
                 </div>
               </div>
             </div>

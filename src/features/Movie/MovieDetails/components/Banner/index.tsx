@@ -8,6 +8,7 @@ import { IMG_URL_Banner, IMG_URL_Poster } from 'constants/movie';
 import styles from './style.module.css';
 import ModalBanner from 'components/Modal/ModalBanner';
 import ModalVideo from 'components/Modal/ModalVideo';
+import Loading from 'components/Loading';
 
 interface ContactFormProps {
   setOpenBanner: (param: boolean) => boolean;
@@ -31,7 +32,7 @@ const Banner = (props: ContactFormProps) => {
   const [openBanner, setOpenBanner] = useState(false);
 
   if (dataMovie.people.loading) {
-    return <div>Loading...</div>
+    return <Loading />
   }
 
   const HandleSplitGenre = (item: any) => {
@@ -69,7 +70,6 @@ const Banner = (props: ContactFormProps) => {
   }
 
   return (
-    
     <div className={styles.mainBanner} id={`${props.id}`}>
       <div className={styles.banner}
         style={{ backgroundImage: `url("${IMG_URL_Banner + detail.backdrop_path}")`, }}>

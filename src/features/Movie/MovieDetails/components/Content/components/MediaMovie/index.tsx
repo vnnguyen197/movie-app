@@ -124,7 +124,7 @@ function MediaMovie() {
             )}
             <li className={style.view_more}>
               <div className={style.link}>
-                <a className={style.view_more}>
+                <a className={style.view_more_link}>
                   View More{" "}
                   <span>
                     <FontAwesomeIcon icon={faArrowRight} size="sm" fixedWidth />
@@ -147,7 +147,7 @@ function MediaMovie() {
             )}
             <li className={style.view_more}>
               <div className={style.link}>
-                <a className={style.view_more}>
+                <a className={style.view_more_link}>
                   View More{" "}
                   <span>
                     <FontAwesomeIcon icon={faArrowRight} size="sm" fixedWidth />
@@ -170,7 +170,7 @@ function MediaMovie() {
             )}
             <li className={style.view_more}>
               <div className={style.link}>
-                <a className={style.view_more}>
+                <a className={style.view_more_link}>
                   View More{" "}
                   <span>
                     <FontAwesomeIcon icon={faArrowRight} size="sm" fixedWidth />

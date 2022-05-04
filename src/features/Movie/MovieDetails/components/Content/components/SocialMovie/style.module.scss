@@ -44,9 +44,14 @@
     .teaser {
       padding: 0px 10px 50px 89px;
       text-align: left;
+      // white-space: nowrap; 
+      // width: 950px; 
+      // overflow: hidden;
       .content_teaser{
-        margin-top: -30px;
+          margin-top: -30px;
+          // text-overflow: ellipsis; 
       }
+     
     }
     .rating {
       display: flex;
@@ -123,7 +128,7 @@
     margin: 0;
   }
   h5 {
-    font-size: 14px;
+    font-size: 13px;
     margin-top: -5px;
     font-weight: normal;
   }

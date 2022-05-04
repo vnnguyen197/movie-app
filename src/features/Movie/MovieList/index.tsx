@@ -24,7 +24,7 @@ const Index = () => {
         window.addEventListener('scroll', () => {
             if (
                 window.scrollY + window.innerHeight >=
-                listItem.clientHeight + listItem.offsetTop + footer.clientHeight - 700
+                listItem.clientHeight + listItem.offsetTop + footer.clientHeight - 330
             ) {
                 dispatch(
                     getListMoviesRequest({
