@@ -1,5 +1,5 @@
-import {PayloadAction} from "@reduxjs/toolkit"
-import  MovieAPI  from "../../services/MovieAPI";
+import { PayloadAction } from "@reduxjs/toolkit";
+import MovieAPI from "../../services/MovieAPI";
 import { call, put, takeLatest, delay } from "redux-saga/effects";
 import {
   getDetailMovieFail,
@@ -12,7 +12,7 @@ import {
 
 function* getListMovies(action: PayloadAction<any>) {
   try {
-    const {results} = yield call(MovieAPI.getList, action.payload);
+    const { results } = yield call(MovieAPI.getList, action.payload);
     yield delay(500);
     yield put(getListMoviesSuccess(results));
   } catch (error) {
@@ -22,8 +22,10 @@ function* getListMovies(action: PayloadAction<any>) {
 
 function* getDetailMovie(action: PayloadAction<any>) {
   try {
-    const response:object = yield call(MovieAPI.getDetailMovie, action.payload.id);
-    yield put(getDetailMovieSuccess(response));
+    if (action.payload.id) {
+      const response: object = yield call(MovieAPI.getDetailMovie, action.payload.id);
+      yield put(getDetailMovieSuccess(response));
+    }
   } catch (error) {
     yield put(getDetailMovieFail(error));
   }
@@ -38,4 +40,5 @@ function* watchGetDetail() {
 }
 
 const saga = [watchGetList(), watchGetDetail()];
+
 export default saga;

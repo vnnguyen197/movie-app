@@ -1,16 +1,15 @@
 import axiosClient from "../api/axiosClient";
 
-const movieAPI = {
-  
+const movieAPI = {  
   getList: (data: any) => {
-    const url = `/popular?api_key=${process.env.REACT_APP_KEY_API}`;
+    const url: string = `/popular?api_key=${process.env.REACT_APP_KEY_API}`;
     const params = {
       page: data.page,
     };
     return axiosClient.get(url, { params });
   },
 
-  getDetailMovie: (data:any) => {
+  getDetailMovie: (data: any) => {
     const url = `/${data}`
     const params = {
       api_key: "b0e9f0e07e242c48387195736fde108b",
@@ -18,7 +17,7 @@ const movieAPI = {
     return axiosClient.get(url, { params });
   },
 
-  getPeople: (data:any) => {
+  getPeople: (data: any) => {
     const url = `/${data}/credits?`
     const params = {
       api_key: "b0e9f0e07e242c48387195736fde108b",
@@ -26,7 +25,7 @@ const movieAPI = {
     return axiosClient.get(url, { params });
   },
 
-  getAllVideos: (data:any) => {
+  getAllVideos: (data: any) => {
     const url = `/${data}/videos`;
     const params = {
       api_key: "b0e9f0e07e242c48387195736fde108b",
@@ -35,7 +34,7 @@ const movieAPI = {
     return axiosClient.get(url, { params });
   },
 
-  getAllImages: (data:any) => {
+  getAllImages: (data: any) => {
     const url = `/${data}/images`;
     const params = {
       api_key: "b0e9f0e07e242c48387195736fde108b",
@@ -43,7 +42,7 @@ const movieAPI = {
     return axiosClient.get(url, { params });
   },
 
-  getKeyWordMovie: (data:any) => {
+  getKeyWordMovie: (data: string) => {
     const url = `/${data}/keywords`;
     const params = {
       api_key: "b0e9f0e07e242c48387195736fde108b",
@@ -51,7 +50,7 @@ const movieAPI = {
     return axiosClient.get(url, { params });
   },
 
-  getReviewMovie: (data:any) => {
+  getReviewMovie: (data: string) => {
     const url = `/${data}/reviews`;
     const params = {
       api_key: "b0e9f0e07e242c48387195736fde108b",
@@ -60,7 +59,7 @@ const movieAPI = {
     return axiosClient.get(url, { params });
   },
 
-  getRecommendations: (data:any) => {
+  getRecommendations: (data: string) => {
     const url = `/${data}/recommendations`;
     const params = {
       api_key: "80654656c6586a0c705642639595a994",

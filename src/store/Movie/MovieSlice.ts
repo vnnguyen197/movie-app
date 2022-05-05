@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { defaultState, DEFAULT_STATE } from "constants/movie";
 
 interface MovieDetail {
-    id: number,
+    id: number;
     poster_path: string;
     backdrop_path: string;
     original_title: string;
@@ -19,9 +19,11 @@ interface MovieDetail {
     title: string;
     belongs_to_collection: { backdrop_path: string, name: string }
 };
+
 interface Movies {
     title: string;
 };
+
 interface State extends defaultState {
     list: Movies[],
     detail: MovieDetail,

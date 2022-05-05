@@ -15,7 +15,7 @@ const Index = () => {
                         </div>
                         <div className={styles.headerLeft_list_movies}> Movies
                             <div className={styles.list_movies}>
-                                <Link to="/" style={{textDecoration: 'none',color: 'black'}}>
+                                <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
                                     <div className={styles.list}> Popular </div>
                                 </Link>
                                 <div className={styles.list}> Now Playing </div>

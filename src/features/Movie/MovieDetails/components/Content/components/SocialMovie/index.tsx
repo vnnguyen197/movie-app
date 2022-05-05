@@ -9,9 +9,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import movieAPI from 'services/MovieAPI';
 import style from './style.module.scss';
-import ReactMarkdown from "react-markdown";
 import { IMG_URL_ReadMore, IMG_URL_SocialMovie } from 'constants/movie';
-
 
 interface Data {
   author: string;
@@ -125,17 +123,12 @@ function SocialMovie() {
                   </div>
                 </div>
                 <div className={style.teaser}>
-                  {data[0].content.length > 500 ? (
                     <p className={style.content_teaser}>
-                      {/* {data[0].content} */}
-                      {data[0].content.substring(0, 500)}...{" "}
-                      <span>
-                        <a href={IMG_URL_ReadMore}>read more</a>
-                      </span>
+                      {data[0].content}
                     </p>
-                   ) : (
-                    <ReactMarkdown>{data[0].content}</ReactMarkdown>
-                  )}  
+                    <div className={style.read_more}>
+                        <a href={IMG_URL_ReadMore}>read more</a>
+                    </div>
                 </div>
               </div>
             </div>

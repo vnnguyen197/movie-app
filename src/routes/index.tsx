@@ -11,11 +11,9 @@ function Routes() {
         <DefaultRoute layout={LayoutType.basic} exact path="/">
           <MovieList />
         </DefaultRoute>
-
-        <DefaultRoute layout={LayoutType.basic} exact path="/movie/:id" >
-          <MovieDetail />
+        <DefaultRoute layout={LayoutType.basic} exact path="/movie/:id">
+           <MovieDetail /> 
         </DefaultRoute>
-
       </Switch>
     </BrowserRouter>
   );

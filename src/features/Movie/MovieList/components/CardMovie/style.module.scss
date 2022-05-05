@@ -11,6 +11,9 @@
                 width: 250px;
                 height: 360px;
                 border-radius: 10px 10px 0 0;
+                &:hover{
+                    cursor: pointer;
+                }
             }
             .card_movie_percent {
                 position: absolute;
@@ -21,7 +24,6 @@
                 border: 3px solid yellowgreen;
                 background-color: #00131c;
                 border-radius: 50%;
-    
                 .percent {
                     display: flex;
                     justify-content: center;
@@ -35,9 +37,7 @@
                         padding-bottom: 3px;
                     }
                 }
-    
             }
-    
             .card_movie_option {
                 position: absolute;
                 top: 10px;
@@ -50,7 +50,6 @@
                     background: violet;
                     cursor: pointer;
                 }
-    
                 .option {
                     display: flex;
                     justify-content: center;
@@ -61,7 +60,7 @@
                 }
             }
         }
-        .card_movie_content {
+    .card_movie_content {
             .items {
                 padding: 20px 0 0 10px;
                 color: black;

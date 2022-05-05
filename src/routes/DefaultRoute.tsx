@@ -4,10 +4,8 @@ import { RouteProps } from './Type';
 
 const DefaultRouter = ({ children, layout, ...rest }: RouteProps) => {
   const LayoutTemplate = Layout(layout);
-
   return(
-  <Route {...rest} render={() => <LayoutTemplate>{children}</LayoutTemplate>}>
-  </Route>
+  <Route {...rest} render={() => <LayoutTemplate>{children}</LayoutTemplate>} />
   );
 };
 

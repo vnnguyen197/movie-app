@@ -7,16 +7,15 @@ interface People{
     list: Array<string>,
     crew: Array<string>,
 }
+interface State extends defaultState{
+  list: People,
+  crew: People,
+}
 
 export const initPeople: People = {
     id: 0,
     list: [],
     crew: [],
-}
-
-interface State extends defaultState{
-    list: People,
-    crew: People,
 }
 
 const initialState: State = {

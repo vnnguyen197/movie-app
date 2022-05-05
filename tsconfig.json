@@ -2,7 +2,8 @@
   "compilerOptions": {
     "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "typeRoots" : ["node_modules/@types", "src/types"],
-    "target": "es5",
+    "target": "es6",
+    "removeComments": false,
     "lib": [
       "dom",
       "dom.iterable",

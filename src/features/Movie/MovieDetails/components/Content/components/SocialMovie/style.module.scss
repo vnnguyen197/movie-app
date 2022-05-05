@@ -1,7 +1,6 @@
 .special_pannel {
   border-bottom: 1px solid #bebebe;
   margin: -30px 0 0 50px;
-
   .menu {
     display: flex;
     align-items: center;
@@ -9,12 +8,11 @@
   .tab_option {
     box-shadow: none;
     margin-left: 20px;
-    .tab{
+    .tab {
       font-weight: bold;
       font-size: 14px;
       color: #000
     }
-    
   }
   .content_review {
     display: flex;
@@ -44,14 +42,14 @@
     .teaser {
       padding: 0px 10px 50px 89px;
       text-align: left;
-      // white-space: nowrap; 
-      // width: 950px; 
-      // overflow: hidden;
-      .content_teaser{
-          margin-top: -30px;
-          // text-overflow: ellipsis; 
+      .content_teaser {
+        margin: -30px 0 0 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
-     
     }
     .rating {
       display: flex;
@@ -102,7 +100,7 @@
         .avatar {
           border-radius: 50%;
           overflow: hidden;
-          img{
+          img {
             padding-right: 10px;
           }
         }
