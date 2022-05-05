@@ -27,7 +27,7 @@ const Banner = (props: ContactFormProps) => {
   const dataMovie = useAppSelector((state) => state);
   const detail = dataMovie.movies.detail;
   const people = dataMovie.people.list.crew;
-
+  
   const [openModal, setOpenModal] = useState(false);
   const [openBanner, setOpenBanner] = useState(false);
 

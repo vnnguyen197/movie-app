@@ -1,5 +1,7 @@
 .ModalBanner {
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -12,9 +14,6 @@
     .ModalContent {
         display: flex;
         z-index: 100;
-        margin-top: 76px;
-        margin-left: 378px;
-
         .imgLeft img {
             width: 385px;
             height: 600px;

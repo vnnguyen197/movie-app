@@ -18,11 +18,14 @@ import { Button } from "reactstrap";
 import MovieAPI from "services/MovieAPI";
 import style from "./style.module.scss";
 import { useAppSelector } from "app/hooks";
-import { IMG_URL_Contributors1, IMG_URL_Contributors2, IMG_URL_Contributors3, IMG_URL_Contributors4 } from "constants/movie";
-import Loading from "components/Loading";
+import {
+  IMG_URL_Contributors1,
+  IMG_URL_Contributors2,
+  IMG_URL_Contributors3,
+  IMG_URL_Contributors4
+} from "constants/movie";
 
 const ContentRight = () => {
-
   const [keywords, setKeywords] = useState([]);
   const [detail, loading] = useAppSelector(({ movies: { detail, loading } }) => [detail, loading]);
   const { id } = useParams<any>();

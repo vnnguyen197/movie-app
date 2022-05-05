@@ -8,7 +8,6 @@
     overflow: auto;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.6);
-
     .modalBanner {
         width: 1140px;
         height: 700px;
@@ -16,10 +15,8 @@
         left: 195px;
         position: fixed;
         z-index: 1000;
-
         .playTrailer {
             background-color: rgb(0, 0, 0);
-
             .title {
                 height: 70px;
                 width: 100%;
@@ -35,7 +32,6 @@
                     font-weight: bold;
                     color: #ffffff;
                     background-color: rgb(0, 0, 0);
-
                     &:hover {
                         color: black;
                         background-color: white;
@@ -43,7 +39,6 @@
                 }
             }
         }
-
         .trailerYoutube {
             iframe {
                 width: 1140px;

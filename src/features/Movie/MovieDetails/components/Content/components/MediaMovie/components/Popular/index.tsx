@@ -5,7 +5,6 @@ import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ModalMovie from 'components/Modal/ModalMovie';
 
-
 type ToDoProps = {
   video: any;
   poster_1: any;

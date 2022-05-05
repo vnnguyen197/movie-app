@@ -2,7 +2,6 @@ import { faArrowRight, faUserAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Loading from "components/Loading";
 import { IMG_URL_TopCast } from "constants/movie";
-import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import style from "./style.module.scss";
 
@@ -10,9 +9,7 @@ const TopCast = (props: any) => {
 
   const listData: any = useSelector((state) => state);
   const people = listData.people.list.cast;
-
-  if (listData.people.loading) return <div><Loading/></div>;
-
+  
   return (
     <div className={style.top_cast}>
       <h3>Top Billed Cast</h3>
