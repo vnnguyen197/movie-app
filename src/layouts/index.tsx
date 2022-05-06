@@ -2,15 +2,15 @@ import BasicLayout from './BasicLayout';
 import BlankLayout from './BlankLayout';
 
 export enum LayoutType {
-  blank,
-  basic,
+  BLANK = "blank",
+  BASIC = "basic",
 }
 
 const Layout = (type: LayoutType) => {
   switch (type) {
-    case LayoutType.blank:
+    case LayoutType.BLANK:
       return BlankLayout;
-    case LayoutType.basic:
+    case LayoutType.BASIC:
       return BasicLayout;
     default:
       return BlankLayout;

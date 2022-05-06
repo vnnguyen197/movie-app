@@ -279,7 +279,6 @@ ol.people {
     display: flex;
     margin: 0;
     padding: 0;
-    padding-right: 50px;
 }
 
 .people li {
@@ -292,7 +291,6 @@ ol.people {
 ol.people li p {
     margin: 0;
     font-size: 14px;
-    margin-bottom: 0;
 }
 
 ol.people li p a {

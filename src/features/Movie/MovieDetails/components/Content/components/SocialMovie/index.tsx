@@ -132,7 +132,7 @@ function SocialMovie() {
                 </div>
               </div>
             </div>
-            <a style={{ marginTop: '20px',marginBottom: '20px', fontWeight: 'bold', fontSize: '17px' }}>
+            <a style={{ marginTop: '20px',marginBottom: '20px', fontWeight: '500', fontSize: '17px' }}>
               Read All Reviews
             </a>
           </div>
@@ -149,7 +149,7 @@ function SocialMovie() {
                         <div className={style.avatar}>
                           <img src={item.avatar} alt={item.name}></img>
                         </div>
-                        <div className="desc">{item.description}</div>
+                        <div className={style.desc}>{item.description}</div>
                       </div>
                     </td>
                     <td>{item.status}</td>
@@ -164,7 +164,7 @@ function SocialMovie() {
               </tbody>
             </table>
             <p>
-            <a style={{ marginTop: '20px',marginBottom: '20px', fontWeight: 'bold', fontSize: '17px' }}>
+            <a style={{ marginTop: '20px',marginBottom: '20px', fontWeight: '500', fontSize: '17px' }}>
                 Go to Discussions
               </a>
             </p>

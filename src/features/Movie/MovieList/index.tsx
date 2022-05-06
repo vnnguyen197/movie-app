@@ -33,6 +33,10 @@ const Index = () => {
                     }));
             }
         });
+        // return () => {
+        //       window.removeEventListener('scroll', footer)
+        //        }
+          
     }, [dispatch, numPage]);
 
     return (

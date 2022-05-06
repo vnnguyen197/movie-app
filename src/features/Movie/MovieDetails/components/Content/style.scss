@@ -1,11 +1,11 @@
 
 .content {
+  padding: 30px 40px 40px 90px;
     .content_wrapper {
       .row {
-        flex-direction: row;
         display: flex;
-        padding: 30px 40px;
-        .col_content {
+        flex-direction: row;
+          .col_content {
           padding: 0;
         }
       }

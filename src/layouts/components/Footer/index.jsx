@@ -4,13 +4,13 @@ import logo from 'assets/images/logo-footer.svg';
 const Index = () => {
     return (
         <footer id="footer" className={styles.footer}>
-            <div className={styles.footerNav}>
-                <div className={styles.footer_list_items}>
-                    <div className={styles.footer_list_img}>
-                        <img src={logo} alt="logo" />
-                    </div>
-                    <div className={styles.footer_list_button}> JOIN THE COMMUNITY </div>
+            <div className={styles.footer_list_items}>
+                <div className={styles.footer_list_img}>
+                    <img src={logo} alt="logo" />
                 </div>
+                <div className={styles.footer_list_button}> JOIN THE COMMUNITY </div>
+            </div>
+            <div className={styles.footerNav}>
                 <div className={styles.footer_list}>
                     <div className={styles.title}> THE BASICS </div>
                     <div> About TMDB </div>

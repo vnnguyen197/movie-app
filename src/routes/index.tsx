@@ -8,10 +8,12 @@ function Routes() {
   return (
     <BrowserRouter>
       <Switch>
-        <DefaultRoute layout={LayoutType.basic} exact path="/">
+
+        <DefaultRoute layout={LayoutType.BASIC} exact path="/">
           <MovieList />
         </DefaultRoute>
-        <DefaultRoute layout={LayoutType.basic} exact path="/movie/:id">
+
+        <DefaultRoute layout={LayoutType.BASIC} exact path="/movie/:id">
            <MovieDetail /> 
         </DefaultRoute>
       </Switch>
