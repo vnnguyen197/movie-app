@@ -10,7 +10,7 @@ import {
   getListMoviesSuccess
 } from "./MovieSlice";
 
-function* getListMovies(action: PayloadAction<any>) {
+export function* getListMovies(action: PayloadAction<any>) {
   try {
     const { results } = yield call(MovieAPI.getList, action.payload);
     yield delay(500);

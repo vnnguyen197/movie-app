@@ -5,7 +5,6 @@ import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 import { faPercent } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from "react-router-dom";
 import { IMG_URL_CardMovie } from 'constants/movie';
-import Loading from 'components/Loading';
 
 type Props = {
     title: string,
@@ -20,7 +19,6 @@ const CardMovie: React.FC<Props> = ({ title, vote_average, release_date, poster_
     const history = useHistory();
     const handleOnclick = (id: any) => {
         history.push(`/movie/${id}`)
-        { <Loading /> }
     }
 
     return (

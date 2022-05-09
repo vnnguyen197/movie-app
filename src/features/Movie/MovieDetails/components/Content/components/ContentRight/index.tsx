@@ -26,7 +26,7 @@ import {
 } from "constants/movie";
 
 const ContentRight = () => {
-  const [keywords, setKeywords] = useState([]);
+  const [keywords, setKeywords] = useState<string[]>([]) ;
   const [detail, loading] = useAppSelector(({ movies: { detail, loading } }) => [detail, loading]);
   const { id } = useParams<any>();
 

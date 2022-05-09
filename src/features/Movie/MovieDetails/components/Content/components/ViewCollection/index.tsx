@@ -2,7 +2,7 @@ import { useAppSelector } from "app/hooks";
 import { IMG_URL_ViewCollection } from "constants/movie";
 import style from "./style.module.scss";
 
-const ViewCollection = (props: any) => {
+const ViewCollection = () => {
   
   const listData = useAppSelector((state) => state.movies);
   const data = listData.detail;

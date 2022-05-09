@@ -1,11 +1,10 @@
 import { faArrowRight, faUserAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Loading from "components/Loading";
 import { IMG_URL_TopCast } from "constants/movie";
 import { useSelector } from "react-redux";
 import style from "./style.module.scss";
 
-const TopCast = (props: any) => {
+const TopCast = () => {
 
   const listData: any = useSelector((state) => state);
   const people = listData.people.list.cast;

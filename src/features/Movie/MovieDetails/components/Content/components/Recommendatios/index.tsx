@@ -6,9 +6,9 @@ import { useParams } from "react-router-dom";
 import movieAPI from "services/MovieAPI";
 import style from "./style.module.scss";
 
-const Recommendations = (props: any) => {
+const Recommendations = () => {
   
-    const [data, setData] = useState([]);
+    const [data, setData] = useState<string[]>([]);
     const { id } = useParams<any>();
     useEffect(() => {
       const fetchRecommen = async () => {

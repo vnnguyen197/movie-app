@@ -63,8 +63,7 @@ export const movieSlice = createSlice({
 
         getListMoviesSuccess: (state: State, action: PayloadAction<any>) => {
             state.loading = false;
-            let listMovies = state.list.concat(action.payload);
-            state.list = listMovies;
+            state.list = state.list.concat(action.payload);
             state.status = true;
         },
 

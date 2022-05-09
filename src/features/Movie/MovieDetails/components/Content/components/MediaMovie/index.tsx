@@ -18,9 +18,9 @@ function MediaMovie() {
   const [openVideo, setOpenVideo] = useState(false);
   const [openBackdrops, setOpenBackdrops] = useState(false);
   const [openPoster, setOpenPoster] = useState(false);
-  const [backdrops, setBackdrops] = useState([]);
-  const [videos, setVideos] = useState([]);
-  const [poster, setPoster] = useState([]);
+  const [backdrops, setBackdrops] = useState<string[]>([]);
+  const [videos, setVideos] = useState<string[]>([]);
+  const [poster, setPoster] = useState<string[]>([]);
 
   const { id } = useParams<any>();
 
