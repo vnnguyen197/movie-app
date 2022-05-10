@@ -38,7 +38,7 @@ const Popular: React.FC<ToDoProps> = ({ video, poster_1, poster_2 }) => {
         <li>
           <div className={style.video_detail}>
             <img
-              src={`https://www.themoviedb.org/t/p/w533_and_h300_bestv2${poster_1.file_path}`}
+              src={`https://www.themoviedb.org/t/p/w533_and_h300_bestv2${poster_1?.file_path}`}
               alt="Backdrops"
             ></img>
           </div>
@@ -46,7 +46,7 @@ const Popular: React.FC<ToDoProps> = ({ video, poster_1, poster_2 }) => {
         <li>
           <div className={style.video_detail}>
             <img
-              src={`https://www.themoviedb.org/t/p/w533_and_h300_bestv2${poster_2.file_path}`}
+              src={`https://www.themoviedb.org/t/p/w533_and_h300_bestv2${poster_2?.file_path}`}
               alt="Backdrops"
             />
           </div>

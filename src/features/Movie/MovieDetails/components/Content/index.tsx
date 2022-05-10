@@ -5,8 +5,6 @@ import Recommendations from "./components/Recommendatios";
 import SocialMovie from "./components/SocialMovie";
 import TopCast from "./components/TopCast";
 import ViewCollection from "./components/ViewCollection";
-
-
 import "./style.scss";
 
 const Content = () => {

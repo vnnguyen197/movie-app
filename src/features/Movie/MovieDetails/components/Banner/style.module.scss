@@ -212,6 +212,9 @@
     transition: linear 0.2s;
     backdrop-filter: blur(20px);
     color: #fff;
+    &:hover{
+        cursor: pointer;
+    }
 }
 .open {
     display: flex;

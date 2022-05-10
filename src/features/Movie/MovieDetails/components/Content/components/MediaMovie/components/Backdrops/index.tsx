@@ -6,7 +6,7 @@ const Backdrops = (props : any) => {
   return (
     <div className={style.video_detail}>
       <img
-        src={IMG_URL_Backdrops + data.file_path}
+        src={IMG_URL_Backdrops + data?.file_path}
         alt="Backdrops"
       />
     </div>

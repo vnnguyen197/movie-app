@@ -13,7 +13,7 @@ import {
 export function* getListMovies(action: PayloadAction<any>) {
   try {
     const { results } = yield call(MovieAPI.getList, action.payload);
-    yield delay(500);
+    yield delay(200);
     yield put(getListMoviesSuccess(results));
   } catch (error) {
     yield put(getListMoviesFail(error));

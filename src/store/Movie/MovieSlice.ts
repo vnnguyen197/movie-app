@@ -162,14 +162,9 @@ export const movieSlice = createSlice({
             state.loading = true;
         },
         getListMoviesSuccess: (state: State, action: PayloadAction<any>) => {
-            // state.loading = false;
-            // let list = state.list ;
-            // list = state.list.push(action.payload);
-            // state.status=true;
-            // console.log(listItem);
-            
             state.loading = false;
-            state.list = state.list.concat(action.payload);
+            let listMovie = state.list.concat(action.payload);
+            state.list = listMovie;
             state.status = true;
         },
         getListMoviesFail: (state: State, action: PayloadAction<any>) => {
@@ -183,6 +178,7 @@ export const movieSlice = createSlice({
             state.loading = false;
             state.status = true;
             state.detail = action.payload;
+            state.list = []
         },
         getDetailMovieFail: (state: State, action: PayloadAction<any>) => {
             state.error = action.payload;
