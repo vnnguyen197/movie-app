@@ -5,7 +5,7 @@ import { useState } from 'react';
 import dayjs from "dayjs";
 import { useAppSelector } from 'app/hooks';
 import { IMG_URL_Banner, IMG_URL_Poster } from 'constants/movie';
-import styles from './style.module.css';
+import styles from './style.module.scss';
 import ModalBanner from 'components/Modal/ModalBanner';
 import ModalVideo from 'components/Modal/ModalVideo';
 import Loading from 'components/Loading';

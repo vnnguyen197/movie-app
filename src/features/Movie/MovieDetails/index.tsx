@@ -13,6 +13,7 @@ const MovieDetail = (props: any) => {
   const { id } = useParams<any>();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     dispatch(getDetailMovieRequest({ id: id }));
     dispatch(getPeopleMovieRequest({ id: id }));
   }, [dispatch, id]);

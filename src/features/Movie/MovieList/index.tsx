@@ -5,48 +5,41 @@ import { useAppDispatch, useAppSelector } from 'app/hooks';
 import CardMovie from './components/CardMovie';
 import Loading from 'components/Loading';
 
-function Index()  {
+function Index() {
     const [list, loading] = useAppSelector(({ movies: { list, loading } }) => [
         list,
         loading
     ]);
+
     const dispatch = useAppDispatch();
     let numPage = 2;
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         dispatch(getListMoviesRequest({ page: 1 }));
     }, [dispatch]);
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const footer = document.querySelector('#footer') as HTMLElement;
-            const listItem = document.querySelector('#listItem') as HTMLElement;
-            window.addEventListener('scroll', () => {
-                if (
-                    window.scrollY + window.innerHeight >=
-                    listItem.clientHeight + listItem.offsetTop + footer.clientHeight - 330
-                ) {
-                    dispatch(
-                        getListMoviesRequest({
-                            page: numPage++,
-                        }));
-                }
-            });
-            return () => {
-                window.removeEventListener('scroll', () => {
-                    if (
-                        window.scrollY + window.innerHeight >=
-                        listItem.clientHeight + listItem.offsetTop + footer.clientHeight - 330
-                    ) {
-                        dispatch(
-                            getListMoviesRequest({
-                                page: numPage++,
-                            }));
-                    }
-                })
-            }
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
         }
-    }, [dispatch, numPage]);
+    }, [dispatch]);
+
+    const handleScroll = () => {
+        const listItem = document.querySelector('#listItem') as HTMLElement;
+        const footer = document.querySelector('#footer') as HTMLElement;
+        if (
+            window.scrollY + window.innerHeight >=
+            listItem.clientHeight + listItem.offsetTop + footer.clientHeight -330
+        ) {
+            dispatch(
+                getListMoviesRequest({
+                    page: numPage++,
+                })
+            );
+        }
+    }
 
     return (
         <>
